@@ -1,0 +1,88 @@
+// import "./App.css";
+// import Title from "./Title";
+// import { useEffect, useState } from "react";
+// import CounterButton from "./CounterButtons";
+// import { useRef } from "react";
+
+// function App() {
+//   const [count, SetCount] = useState(0);
+
+//   const increase = () => {
+//     SetCount((prev) => prev + 1);
+//   };
+
+//   const decrease = () => {
+//     SetCount((prev) => Math.max(0, prev - 1));
+//   };
+
+//   const inputRef = useRef(null);
+
+//   const focusInput = () => {
+//     inputRef.current.focus();
+//   };
+
+//   useEffect(() => {
+//     document.title = `Count: ${count}`
+//     console.log("已完成");
+//   },[count]);
+
+//   useEffect(() => {
+//   const handleResize = () => {
+//     console.log(window.innerWidth);
+//   };
+
+//   window.addEventListener("resize", handleResize);
+
+//   return () => {
+//     window.removeEventListener("resize", handleResize);
+//   };
+// }, []);
+
+// useEffect(() => {
+//   console.log("mounted");
+
+//   return () => {
+//     console.log("unmounted");
+//   };
+// }, []);
+
+//   return (
+//     <>
+//       <Title text="React" color="red" />
+//       <h1>{count}</h1>
+//       <CounterButton onIncrease={increase} onDecrease={decrease} />
+//       {/* prev為更新前的職 */}
+//       {/* <button onClick={() => SetCount(prev => Math.max(0, prev - 1))
+// }>
+//         -1
+//       </button>
+//     <button onClick={() => SetCount(prev => prev + 1)}>
+//     +1
+//     </button> */}
+
+//      <input ref={inputRef} />
+//       <button onClick={focusInput}>Focus</button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+}
+
+export default App;

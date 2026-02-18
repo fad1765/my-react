@@ -1,0 +1,29 @@
+.product-card {
+  width: 300px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.product-card p {
+  color: #ff5722;
+  font-weight: bold;
+}

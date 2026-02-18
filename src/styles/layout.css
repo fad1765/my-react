@@ -1,0 +1,23 @@
+.content-wrapper {
+  display: flex; /* 左右排列 Sidebar + Main Content */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f2f2f2;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  flex: 1; /* 撐滿剩餘空間 */
+  padding: 20px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0; /* 上下左右 0 */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
