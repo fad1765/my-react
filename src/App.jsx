@@ -72,6 +72,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
+import Clothing from "./pages/Clothing";
+import Pants from "./pages/Pants";
+import Socks from "./pages/Socks";
 
 function App() {
   return (
@@ -79,6 +82,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/clothing" element={<Clothing />} />
+          <Route path="/pants" element={<Pants />} />
+        <Route path="/socks" element={<Socks />} />
         </Routes>
       </Layout>
     </BrowserRouter>

@@ -1,0 +1,15 @@
+.category-page {
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.category-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
