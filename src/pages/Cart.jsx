@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useCart } from "../context/useCart";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/useAuth";
 import "../styles/Cart.css";
 
 export default function Cart() {
   const { cartItems, removeFromCart, updateQuantity, totalPrice, setCartItems } = useCart();
+   const { user } = useAuth();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    name: "",
+    name: user?.name || "",
     phone: "",
-    email: "",
+    email: user?.email || "",
     delivery: "home",
     city: "",
     district: "",
