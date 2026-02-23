@@ -1,12 +1,12 @@
 import "../styles/ProductCard.css";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, onClick }) {
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={() => onClick(product)}>
       <div className="product-image-wrapper">
         <img src={product.image} alt={product.name} />
         <div className="product-overlay">
-          <button className="add-to-cart-btn">加入購物車</button>
+          <span className="view-detail">查看詳情</span>
         </div>
       </div>
       <div className="product-info">

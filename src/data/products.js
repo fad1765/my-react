@@ -5,6 +5,10 @@ export const products = [
     price: 1290,
     image: "/images/clothes1.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 2,
@@ -12,6 +16,10 @@ export const products = [
     price: 590,
     image: "/images/clothes2.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 3,
@@ -19,6 +27,10 @@ export const products = [
     price: 790,
     image: "/images/clothes3.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 4,
@@ -26,6 +38,10 @@ export const products = [
     price: 690,
     image: "/images/clothes4.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 5,
@@ -33,6 +49,10 @@ export const products = [
     price: 990,
     image: "/images/clothes5.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 6,
@@ -40,6 +60,10 @@ export const products = [
     price: 790,
     image: "/images/clothes6.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 0,
   },
   {
     id: 7,
@@ -47,6 +71,10 @@ export const products = [
     price: 790,
     image: "/images/clothes9.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 8,
@@ -54,6 +82,10 @@ export const products = [
     price: 790,
     image: "/images/clothes10.jpg",
     category: "clothing",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
+   stock: 15,
   },
   {
     id: 9,
@@ -61,6 +93,9 @@ export const products = [
     price: 790,
     image: "/images/pant1.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 10,
@@ -68,6 +103,9 @@ export const products = [
     price: 790,
     image: "/images/pant2.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 11,
@@ -75,6 +113,9 @@ export const products = [
     price: 790,
     image: "/images/pant3.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 12,
@@ -82,6 +123,9 @@ export const products = [
     price: 790,
     image: "/images/pant4.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 13,
@@ -89,6 +133,9 @@ export const products = [
     price: 790,
     image: "/images/pant5.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 14,
@@ -96,6 +143,9 @@ export const products = [
     price: 790,
     image: "/images/pant6.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 15,
@@ -103,6 +153,9 @@ export const products = [
     price: 790,
     image: "/images/pant7.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 16,
@@ -110,6 +163,9 @@ export const products = [
     price: 790,
     image: "/images/pant8.jpg",
     category: "pant",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 17,
@@ -117,6 +173,9 @@ export const products = [
     price: 790,
     image: "/images/sock1.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 18,
@@ -124,6 +183,9 @@ export const products = [
     price: 790,
     image: "/images/sock2.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 19,
@@ -131,6 +193,9 @@ export const products = [
     price: 790,
     image: "/images/sock3.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 20,
@@ -138,6 +203,9 @@ export const products = [
     price: 790,
     image: "/images/sock4.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 21,
@@ -145,6 +213,9 @@ export const products = [
     price: 790,
     image: "/images/sock5.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 22,
@@ -152,6 +223,9 @@ export const products = [
     price: 790,
     image: "/images/sock6.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 23,
@@ -159,6 +233,9 @@ export const products = [
     price: 790,
     image: "/images/sock7.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
   {
     id: 24,
@@ -166,6 +243,9 @@ export const products = [
     price: 790,
     image: "/images/sock8.jpg",
     category: "sock",
+    description: "經典水洗工藝，呈現自然刷舊感，百搭各種穿搭風格。",
+    rating: 4.5,   
+  reviews: 28,
   },
 ];
 
