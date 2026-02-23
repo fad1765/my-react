@@ -1,18 +1,24 @@
 .carousel {
   display: flex;
   align-items: center;
+  justify-content: center; /* 👈 置中 */
   position: relative;
+  width: 100%;
 }
 
 .carousel-window {
-  width: 100%; /* 3 cards */
   overflow: hidden;
+  width: calc(260px * 6 + 20px * 5); /* 4張卡片 + 3個gap */
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.4s ease;
   gap: 20px;
+}
+
+.carousel-track .product-card {
+  width: 260px;
+  flex-shrink: 0;
 }
 
 .arrow {
@@ -21,4 +27,9 @@
   font-size: 40px;
   cursor: pointer;
   padding: 20px;
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
 }

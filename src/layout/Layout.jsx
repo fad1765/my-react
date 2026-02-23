@@ -14,15 +14,15 @@ export default function Layout({ children }) {
     <div className="layout">
       <Header toggleSidebar={toggleSidebar} />
 
-      {/* 🔥 遮罩 */}
       {isSidebarOpen && (
-        <div className="overlay" onClick={closeSidebar}>
-          <Sidebar />
-        </div>
+        <>
+          <div className="overlay" onClick={closeSidebar} />
+          <Sidebar onClose={closeSidebar} />
+        </>
       )}
 
       <main className="main-content">{children}</main>
-       <Footer />
+      <Footer />
     </div>
   )
 }

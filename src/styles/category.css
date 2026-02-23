@@ -1,15 +1,37 @@
 .category-page {
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .category-title {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #222;
+  border-left: 4px solid #333;
+  padding-left: 12px;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 24px;
+}
+
+/* 👈 grid 裡的卡片撐滿格子 */
+.product-grid .product-card {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

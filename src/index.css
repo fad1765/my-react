@@ -11,3 +11,6 @@ body {
   color: #333;
 }
 
+.main {
+  margin-left: 200px;   /* 等於 sidebar 寬度 */
+}

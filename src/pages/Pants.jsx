@@ -4,7 +4,7 @@ import "../styles/category.css";
 
 export default function Clothing() {
   const clothingProducts = products.filter(
-    product => product.category === "clothing"
+    product => product.category === "pant"
   );
 
   return (

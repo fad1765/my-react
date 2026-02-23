@@ -4,56 +4,168 @@ export const products = [
     name: "水洗牛仔外套",
     price: 1290,
     image: "/images/clothes1.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 2,
     name: "白色短袖背心",
     price: 590,
     image: "/images/clothes2.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 3,
     name: "羊毛藍格紋外套",
     price: 790,
     image: "/images/clothes3.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 4,
     name: "黑色連帽大學T",
     price: 690,
     image: "/images/clothes4.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 5,
     name: "黑色牛仔外套",
     price: 990,
     image: "/images/clothes5.jpg",
-    category: "clothing"
+    category: "clothing",
   },
-    {
+  {
     id: 6,
     name: "黑色條紋上衣",
     price: 790,
     image: "/images/clothes6.jpg",
-    category: "clothing"
+    category: "clothing",
   },
-   {
+  {
     id: 7,
     name: "白色圖T",
     price: 790,
     image: "/images/clothes9.jpg",
-    category: "clothing"
+    category: "clothing",
   },
-   {
+  {
     id: 8,
     name: "動物T",
     price: 790,
     image: "/images/clothes10.jpg",
-    category: "clothing"
+    category: "clothing",
+  },
+  {
+    id: 9,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant1.jpg",
+    category: "pant",
+  },
+  {
+    id: 10,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant2.jpg",
+    category: "pant",
+  },
+  {
+    id: 11,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant3.jpg",
+    category: "pant",
+  },
+  {
+    id: 12,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant4.jpg",
+    category: "pant",
+  },
+  {
+    id: 13,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant5.jpg",
+    category: "pant",
+  },
+  {
+    id: 14,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant6.jpg",
+    category: "pant",
+  },
+  {
+    id: 15,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant7.jpg",
+    category: "pant",
+  },
+  {
+    id: 16,
+    name: "動物T",
+    price: 790,
+    image: "/images/pant8.jpg",
+    category: "pant",
+  },
+  {
+    id: 17,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock1.jpg",
+    category: "sock",
+  },
+  {
+    id: 18,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock2.jpg",
+    category: "sock",
+  },
+  {
+    id: 19,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock3.jpg",
+    category: "sock",
+  },
+  {
+    id: 20,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock4.jpg",
+    category: "sock",
+  },
+  {
+    id: 21,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock5.jpg",
+    category: "sock",
+  },
+  {
+    id: 22,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock6.jpg",
+    category: "sock",
+  },
+  {
+    id: 23,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock7.jpg",
+    category: "sock",
+  },
+  {
+    id: 24,
+    name: "動物T",
+    price: 790,
+    image: "/images/sock8.jpg",
+    category: "sock",
   },
 ];
 
@@ -63,42 +175,56 @@ export const hotProducts = [
     name: "水洗牛仔外套",
     price: 1290,
     image: "/images/clothes1.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 2,
     name: "白色短袖背心",
     price: 590,
     image: "/images/clothes2.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 3,
     name: "羊毛藍格紋外套",
     price: 790,
     image: "/images/clothes3.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 4,
     name: "黑色連帽大學T",
     price: 690,
     image: "/images/clothes4.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 5,
     name: "黑色牛仔外套",
     price: 990,
     image: "/images/clothes5.jpg",
-    category: "clothing"
+    category: "clothing",
   },
-    {
+  {
     id: 6,
     name: "黑色條紋上衣",
     price: 790,
     image: "/images/clothes6.jpg",
-    category: "clothing"
+    category: "clothing",
+  },
+  {
+    id: 7,
+    name: "黑色條紋上衣",
+    price: 790,
+    image: "/images/sock8.jpg",
+    category: "sock",
+  },
+  {
+    id: 8,
+    name: "黑色條紋上衣",
+    price: 790,
+    image: "/images/pant7.jpg",
+    category: "pant",
   },
 ];
 
@@ -108,13 +234,13 @@ export const limitedProducts = [
     name: "黑色水洗背心",
     price: 399,
     image: "/images/clothes7.jpg",
-    category: "clothing"
+    category: "clothing",
   },
   {
     id: 8,
     name: "素色棉T",
     price: 299,
     image: "/images/clothes8.jpg",
-    category: "clothing"
-  }
+    category: "clothing",
+  },
 ];

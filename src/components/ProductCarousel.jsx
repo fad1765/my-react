@@ -2,32 +2,29 @@ import { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import "../styles/ProductCarousel.css";
 
+const VISIBLE_COUNT = 6; // 一次顯示幾張
+
 export default function ProductCarousel({ products }) {
   const [index, setIndex] = useState(0);
   const [itemWidth, setItemWidth] = useState(0);
-  const [maxTranslate, setMaxTranslate] = useState(0);
-  const windowRef = useRef(null);
   const trackRef = useRef(null);
 
   useEffect(() => {
-    if (!windowRef.current || !trackRef.current) return;
+    if (!trackRef.current) return;
 
     const firstItem = trackRef.current.children[0];
     if (!firstItem) return;
 
-    const itemRealWidth = firstItem.offsetWidth + 20;
-    setItemWidth(itemRealWidth);
-
-    const visibleWidth = windowRef.current.offsetWidth;
-    const totalWidth = products.length * itemRealWidth;
-
-    setMaxTranslate(Math.max(0, totalWidth - visibleWidth));
+    const gap = 20;
+    setItemWidth(firstItem.offsetWidth + gap);
   }, [products]);
 
-  const next = () => setIndex(prev => prev + 1);
+  const maxIndex = Math.max(0, products.length - VISIBLE_COUNT);
+
+  const next = () => setIndex(prev => Math.min(prev + 1, maxIndex));
   const prev = () => setIndex(prev => Math.max(prev - 1, 0));
 
-  const translateX = Math.min(index * itemWidth, maxTranslate);
+  const translateX = index * itemWidth;
 
   return (
     <div className="carousel">
@@ -35,7 +32,7 @@ export default function ProductCarousel({ products }) {
         ‹
       </button>
 
-      <div className="carousel-window" ref={windowRef}>
+      <div className="carousel-window">
         <div
           className="carousel-track"
           ref={trackRef}
@@ -52,7 +49,7 @@ export default function ProductCarousel({ products }) {
 
       <button
         onClick={next}
-        disabled={translateX >= maxTranslate}
+        disabled={index >= maxIndex}
         className="arrow right"
       >
         ›
