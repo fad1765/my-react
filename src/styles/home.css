@@ -1,46 +1,49 @@
 .home {
-  padding: 20px;
+  animation: fadeUp 0.3s ease;
 }
 
-/* Slider 與標題的間距 */
-.home-title {
+.home-title,
+.home-title-limited {
   display: flex;
-  align-items: center;   /* 文字與 icon 垂直置中 */
-  gap: 8px;              /* 文字與 icon 間距 */
-  margin-top: 40px;      /* 與 slider 的距離 */
-  font-size: 28px;
-  border-left: 5px solid #ff5722;
-  padding-left: 12px;
-  margin: 30px;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #111;
+  padding: 0 24px;
+  margin: 52px 0 24px;
 }
 
-/* 火焰 icon 樣式 */
+/* 標題兩側線條 */
+.home-title::before,
+.home-title-limited::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: #111;
+}
+
+.home-title::after,
+.home-title-limited::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+}
+
 .fire-icon {
-  color: #ff5722;
+  color: #e53935;
   animation: flame 1s infinite alternate;
 }
 
-.home-title-limited {
-  display: flex;
-  align-items: center;   /* 文字與 icon 垂直置中 */
-  gap: 8px;              /* 文字與 icon 間距 */
-  margin-top: 40px;      /* 與 slider 的距離 */
-  font-size: 28px;
-  border-left: 5px solid #ff5722;
-  padding-left: 12px;
-  margin: 30px;
-}
-
-/* 火焰 icon 樣式 */
 .time-icon {
+  color: #f5a623;
   animation: flame 1s infinite alternate;
 }
 
 @keyframes flame {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.15);
-  }
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
 }

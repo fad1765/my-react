@@ -8,29 +8,22 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div>
-          <h4 className="about-us">關於我們</h4>
+          <h4 className="footer-heading">關於我們</h4>
           <p>高品質流行服飾品牌</p>
         </div>
 
         <div>
-          <h4 className="customer-service">客服</h4>
+          <h4 className="footer-heading">客服</h4>
           <p>Email: clothingstore@mail.com</p>
         </div>
 
         <div>
-          <h4>社群</h4>
-          <p className="social-item">
-            Instagram
-          <FaInstagram className="ig-icon" />
-          </p>
-          <p className="social-item">
-            Facebook
-          <FaFacebook  className="fb-icon"/>
-          </p>
-          <p className="social-item">
-            Line
-          <FaLine   className="line-icon"/>
-          </p>
+          <h4 className="footer-heading">社群</h4>
+          <div className="social-row">
+            <FaInstagram className="ig-icon" />
+            <FaFacebook className="fb-icon" />
+            <FaLine className="line-icon" />
+          </div>
         </div>
       </div>
 
