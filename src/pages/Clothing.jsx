@@ -8,7 +8,7 @@ export default function Clothing() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const clothingProducts = products.filter(
-    product => product.category === "clothing"
+    (product) => product.category === "clothing",
   );
 
   return (
@@ -16,7 +16,7 @@ export default function Clothing() {
       <h1 className="category-title">衣服</h1>
 
       <div className="product-grid">
-        {clothingProducts.map(product => (
+        {clothingProducts.map((product) => (
           <ProductCard
             key={product.id}
             product={product}

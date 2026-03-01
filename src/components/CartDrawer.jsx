@@ -1,9 +1,10 @@
 import { useCart } from "../context/useCart";
 import { useNavigate } from "react-router-dom";
-import "../styles/CartDrawer.css";
+import "../styles/cartDrawer.css";
 
 export default function CartDrawer() {
-  const { cartItems, isCartOpen, setIsCartOpen, removeFromCart, totalPrice } = useCart();
+  const { cartItems, isCartOpen, setIsCartOpen, removeFromCart, totalPrice } =
+    useCart();
   const navigate = useNavigate();
 
   if (!isCartOpen) return null;
@@ -28,19 +29,25 @@ export default function CartDrawer() {
                   <p className="cart-item-name">{item.name}</p>
                   <p className="cart-item-size">尺寸：{item.size}</p>
                   <p className="cart-item-qty">數量：{item.quantity}</p>
-                  <p className="cart-item-price">NT$ {item.price * item.quantity}</p>
+                  <p className="cart-item-price">
+                    NT$ {item.price * item.quantity}
+                  </p>
                 </div>
                 <button
                   className="cart-item-remove"
                   onClick={() => removeFromCart(item.id, item.size)}
-                >✕</button>
+                >
+                  ✕
+                </button>
               </div>
             ))
           )}
         </div>
 
         <div className="cart-drawer-footer">
-          <p className="cart-total">總計：<span>NT$ {totalPrice}</span></p>
+          <p className="cart-total">
+            總計：<span>NT$ {totalPrice}</span>
+          </p>
           <button
             className="cart-checkout-btn"
             onClick={() => {

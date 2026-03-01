@@ -17,7 +17,7 @@
 
 .footer-container p {
   font-size: 13px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   margin: 4px 0;
 }
 
@@ -30,7 +30,6 @@
   color: #fff;
 }
 
-/* 👈 三個 icon 橫排 */
 .social-row {
   display: flex;
   align-items: center;
@@ -45,7 +44,7 @@
 }
 
 .fb-icon {
-  color: #0866FF;
+  color: #0866ff;
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -69,6 +68,6 @@
   margin-top: 16px;
   font-size: 12px;
   color: #666;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 12px;
 }

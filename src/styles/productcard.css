@@ -3,14 +3,16 @@
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-  border: 1px solid rgba(0,0,0,0.06);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   flex-shrink: 0;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .product-image-wrapper {
@@ -33,7 +35,7 @@
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.28);
+  background: rgba(0, 0, 0, 0.28);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -59,7 +61,7 @@
 
 .product-info {
   padding: 12px 14px 14px;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .product-name {

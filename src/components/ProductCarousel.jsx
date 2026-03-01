@@ -1,29 +1,24 @@
 import { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
-import "../styles/ProductCarousel.css";
+import "../styles/productCarousel.css";
 
-const VISIBLE_COUNT = 6; // 一次顯示幾張
+const VISIBLE_COUNT = 6;
 
-export default function ProductCarousel({ products }) {
+export default function ProductCarousel({ products, onProductClick }) {
   const [index, setIndex] = useState(0);
   const [itemWidth, setItemWidth] = useState(0);
   const trackRef = useRef(null);
 
   useEffect(() => {
     if (!trackRef.current) return;
-
     const firstItem = trackRef.current.children[0];
     if (!firstItem) return;
-
-    const gap = 20;
-    setItemWidth(firstItem.offsetWidth + gap);
+    setItemWidth(firstItem.offsetWidth + 20);
   }, [products]);
 
   const maxIndex = Math.max(0, products.length - VISIBLE_COUNT);
-
-  const next = () => setIndex(prev => Math.min(prev + 1, maxIndex));
-  const prev = () => setIndex(prev => Math.max(prev - 1, 0));
-
+  const next = () => setIndex((prev) => Math.min(prev + 1, maxIndex));
+  const prev = () => setIndex((prev) => Math.max(prev - 1, 0));
   const translateX = index * itemWidth;
 
   return (
@@ -38,11 +33,15 @@ export default function ProductCarousel({ products }) {
           ref={trackRef}
           style={{
             transform: `translateX(-${translateX}px)`,
-            transition: "transform 0.4s ease"
+            transition: "transform 0.4s ease",
           }}
         >
-          {products.map(product => (
-            <ProductCard key={product.id} product={product} />
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={onProductClick} 
+            />
           ))}
         </div>
       </div>

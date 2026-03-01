@@ -15,7 +15,7 @@ export default function Login() {
   });
 
   const handleChange = (e) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     setAuthError("");
   };
 
@@ -83,19 +83,19 @@ export default function Login() {
 
         <p className="login-switch">
           {isRegister ? "已有帳號？" : "還沒有帳號？"}
-          <span onClick={() => {
-            setIsRegister(prev => !prev);
-            setAuthError("");
-            setForm({ name: "", email: "", password: "" });
-          }}>
+          <span
+            onClick={() => {
+              setIsRegister((prev) => !prev);
+              setAuthError("");
+              setForm({ name: "", email: "", password: "" });
+            }}
+          >
             {isRegister ? "前往登入" : "立即註冊"}
           </span>
         </p>
 
         {!isRegister && (
-          <p className="login-hint">
-            測試帳號：ming@test.com ／ 密碼：123456
-          </p>
+          <p className="login-hint">測試帳號：ming@test.com ／ 密碼：123456</p>
         )}
       </div>
     </div>

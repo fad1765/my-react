@@ -13,7 +13,7 @@ export function AuthProvider({ children }) {
 
   const login = (email, password) => {
     const found = FAKE_USERS.find(
-      u => u.email === email && u.password === password
+      (u) => u.email === email && u.password === password,
     );
     if (found) {
       setUser({ id: found.id, name: found.name, email: found.email });
@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
   };
 
   const register = (name, email, password) => {
-    const exists = FAKE_USERS.find(u => u.email === email);
+    const exists = FAKE_USERS.find((u) => u.email === email);
     if (exists) {
       setAuthError("此信箱已被註冊");
       return false;
@@ -44,7 +44,9 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, authError, setAuthError, login, register, logout }}>
+    <AuthContext.Provider
+      value={{ user, authError, setAuthError, login, register, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -1,14 +1,14 @@
 .carousel {
   display: flex;
   align-items: center;
-  justify-content: center; /* 👈 置中 */
+  justify-content: center;
   position: relative;
   width: 100%;
 }
 
 .carousel-window {
   overflow: hidden;
-  width: calc(260px * 6 + 20px * 5); /* 4張卡片 + 3個gap */
+  width: calc(260px * 6 + 20px * 5); /* 6張卡片 + 5個gap */
 }
 
 .carousel-track {

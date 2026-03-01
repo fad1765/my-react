@@ -13,10 +13,21 @@ export default function Sidebar({ onClose }) {
     <aside className="sidebar">
       <h1 className="sidebar-title">商品分類</h1>
       <ul className="sidebar-list">
-        <li className="sidebar-item" onClick={() => handleNavigate("/")}>首頁</li>
-        <li className="sidebar-item" onClick={() => handleNavigate("/clothing")}>上衣</li>
-        <li className="sidebar-item" onClick={() => handleNavigate("/pants")}>褲子</li>
-        <li className="sidebar-item" onClick={() => handleNavigate("/socks")}>襪子</li>
+        <li className="sidebar-item" onClick={() => handleNavigate("/")}>
+          首頁
+        </li>
+        <li
+          className="sidebar-item"
+          onClick={() => handleNavigate("/clothing")}
+        >
+          上衣
+        </li>
+        <li className="sidebar-item" onClick={() => handleNavigate("/pants")}>
+          褲子
+        </li>
+        <li className="sidebar-item" onClick={() => handleNavigate("/socks")}>
+          襪子
+        </li>
       </ul>
     </aside>
   );

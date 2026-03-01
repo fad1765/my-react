@@ -47,7 +47,12 @@ export default function Header({ toggleSidebar }) {
         {user ? (
           <>
             <span className="header-username">👤 {user.name}</span>
-            <button className="logout-btn" onClick={() => setShowLogoutModal(true)}>登出</button>
+            <button
+              className="logout-btn"
+              onClick={() => setShowLogoutModal(true)}
+            >
+              登出
+            </button>
           </>
         ) : (
           <button className="login-link-btn" onClick={() => navigate("/login")}>
@@ -57,9 +62,7 @@ export default function Header({ toggleSidebar }) {
 
         <button className="cart-btn" onClick={() => setIsCartOpen(true)}>
           購物車 <PiShoppingCartSimpleBold />
-          {totalCount > 0 && (
-            <span className="cart-count">{totalCount}</span>
-          )}
+          {totalCount > 0 && <span className="cart-count">{totalCount}</span>}
         </button>
       </div>
 
@@ -70,9 +73,7 @@ export default function Header({ toggleSidebar }) {
         />
       )}
 
-      {showSuccess && (
-        <LogoutSuccessModal onDone={handleSuccessDone} />
-      )}
+      {showSuccess && <LogoutSuccessModal onDone={handleSuccessDone} />}
     </header>
   );
 }

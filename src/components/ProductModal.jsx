@@ -14,9 +14,23 @@ export default function ProductModal({ product, onClose }) {
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => {
-      if (i < Math.floor(rating)) return <span key={i} className="star full">★</span>;
-      if (i < rating) return <span key={i} className="star half">★</span>;
-      return <span key={i} className="star empty">☆</span>;
+      if (i < Math.floor(rating))
+        return (
+          <span key={i} className="star full">
+            ★
+          </span>
+        );
+      if (i < rating)
+        return (
+          <span key={i} className="star half">
+            ★
+          </span>
+        );
+      return (
+        <span key={i} className="star empty">
+          ☆
+        </span>
+      );
     });
   };
 
@@ -32,7 +46,9 @@ export default function ProductModal({ product, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>✕</button>
+        <button className="modal-close" onClick={onClose}>
+          ✕
+        </button>
 
         <div className="modal-body">
           <div className="modal-image-wrapper">
@@ -61,7 +77,7 @@ export default function ProductModal({ product, onClose }) {
             <div className="modal-size">
               <span>尺寸：</span>
               <div className="size-options">
-                {SIZES.map(size => (
+                {SIZES.map((size) => (
                   <button
                     key={size}
                     className={`size-btn ${selectedSize === size ? "active" : ""}`}
@@ -81,9 +97,21 @@ export default function ProductModal({ product, onClose }) {
             {product.stock > 0 && (
               <div className="modal-quantity">
                 <span>數量：</span>
-                <button onClick={() => setQuantity(prev => Math.max(1, prev - 1))} disabled={quantity <= 1}>−</button>
+                <button
+                  onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+                  disabled={quantity <= 1}
+                >
+                  −
+                </button>
                 <span className="qty-number">{quantity}</span>
-                <button onClick={() => setQuantity(prev => Math.min(product.stock, prev + 1))} disabled={quantity >= product.stock}>+</button>
+                <button
+                  onClick={() =>
+                    setQuantity((prev) => Math.min(product.stock, prev + 1))
+                  }
+                  disabled={quantity >= product.stock}
+                >
+                  +
+                </button>
               </div>
             )}
 
