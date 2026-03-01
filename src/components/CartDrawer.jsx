@@ -1,6 +1,6 @@
 import { useCart } from "../context/useCart";
 import { useNavigate } from "react-router-dom";
-import "../styles/cartDrawer.css";
+import "../styles/cartdrawer.css";
 
 export default function CartDrawer() {
   const { cartItems, isCartOpen, setIsCartOpen, removeFromCart, totalPrice } =
