@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import CartDrawer from "../components/CartDrawer";
-import "../styles/Layout.css";
+import "../styles/layout.css";
 import Footer from "../components/Footer";
 
 export default function Layout({ children }) {

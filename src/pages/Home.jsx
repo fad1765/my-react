@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Slider from "../components/Slider";
 import { SlFire } from "react-icons/sl";
-import "../styles/Home.css";
+import "../styles/home.css";
 import ProductCarousel from "../components/ProductCarousel";
 import ProductModal from "../components/ProductModal";
 import { hotProducts, limitedProducts } from "../data/products";

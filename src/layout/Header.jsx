@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Header.css";
+import "../styles/header.css";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { BsLayoutTextSidebar } from "react-icons/bs";
 import { ImSearch } from "react-icons/im";

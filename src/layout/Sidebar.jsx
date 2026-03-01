@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/Sidebar.css";
+import "../styles/sidebar.css";
 
 export default function Sidebar({ onClose }) {
   const navigate = useNavigate();
