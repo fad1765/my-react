@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../styles/LogoutSuccessModal.css";
+import "../styles/logoutSuccessModal.css";
 
 export default function LogoutSuccessModal({ onDone }) {
   useEffect(() => {

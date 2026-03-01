@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/useCart";
-import "../styles/ProductModal.css";
+import "../styles/productModal.css";
 
 const SIZES = ["S", "M", "L", "XL"];
 

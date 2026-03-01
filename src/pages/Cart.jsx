@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCart } from "../context/useCart";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
-import "../styles/Cart.css";
+import "../styles/cart.css";
 
 export default function Cart() {
   const {
