@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
-import "../styles/productCarousel.css";
+import "../styles/ProductCarousel.css";
 
 const VISIBLE_COUNT = 6;
 
