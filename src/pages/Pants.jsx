@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
+import ProductModal from "../components/ProductModal";
 import "../styles/category.css";
 
-export default function Clothing() {
-  const clothingProducts = products.filter(
-    (product) => product.category === "pant",
+export default function Pants() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const pantProducts = products.filter(
+    (product) => product.category === "pant"
   );
 
   return (
@@ -12,10 +16,21 @@ export default function Clothing() {
       <h1 className="category-title">褲子</h1>
 
       <div className="product-grid">
-        {clothingProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {pantProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            onClick={setSelectedProduct}
+          />
         ))}
       </div>
+
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
   );
 }
