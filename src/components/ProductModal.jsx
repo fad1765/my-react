@@ -3,6 +3,7 @@ import { useCart } from "../context/useCart";
 import "../styles/productmodal.css";
 
 const SIZES = ["S", "M", "L", "XL"];
+const SIZE_CATEGORIES = ["clothing", "pant"];
 
 export default function ProductModal({ product, onClose }) {
   const [quantity, setQuantity] = useState(1);
@@ -12,43 +13,29 @@ export default function ProductModal({ product, onClose }) {
 
   if (!product) return null;
 
+  const hasSize = SIZE_CATEGORIES.includes(product.category);
+
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => {
-      if (i < Math.floor(rating))
-        return (
-          <span key={i} className="star full">
-            ★
-          </span>
-        );
-      if (i < rating)
-        return (
-          <span key={i} className="star half">
-            ★
-          </span>
-        );
-      return (
-        <span key={i} className="star empty">
-          ☆
-        </span>
-      );
+      if (i < Math.floor(rating)) return <span key={i} className="star full">★</span>;
+      if (i < rating) return <span key={i} className="star half">★</span>;
+      return <span key={i} className="star empty">☆</span>;
     });
   };
 
   const handleAddToCart = () => {
-    if (!selectedSize) {
+    if (hasSize && !selectedSize) {
       setSizeError(true);
       return;
     }
-    addToCart(product, quantity, selectedSize);
+    addToCart(product, quantity, hasSize ? selectedSize : "固定尺寸");
     onClose();
   };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          ✕
-        </button>
+        <button className="modal-close" onClick={onClose}>✕</button>
 
         <div className="modal-body">
           <div className="modal-image-wrapper">
@@ -73,45 +60,34 @@ export default function ProductModal({ product, onClose }) {
               </span>
             </p>
 
-            {/* Size 選擇 */}
-            <div className="modal-size">
-              <span>尺寸：</span>
-              <div className="size-options">
-                {SIZES.map((size) => (
-                  <button
-                    key={size}
-                    className={`size-btn ${selectedSize === size ? "active" : ""}`}
-                    onClick={() => {
-                      setSelectedSize(size);
-                      setSizeError(false);
-                    }}
-                  >
-                    {size}
-                  </button>
-                ))}
+            {/* 👈 只有 clothing 和 pant 才顯示尺寸 */}
+            {hasSize && (
+              <div className="modal-size">
+                <span>尺寸：</span>
+                <div className="size-options">
+                  {SIZES.map((size) => (
+                    <button
+                      key={size}
+                      className={`size-btn ${selectedSize === size ? "active" : ""}`}
+                      onClick={() => {
+                        setSelectedSize(size);
+                        setSizeError(false);
+                      }}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+                {sizeError && <p className="size-error">請選擇尺寸</p>}
               </div>
-              {sizeError && <p className="size-error">請選擇尺寸</p>}
-            </div>
+            )}
 
-            {/* 數量 */}
             {product.stock > 0 && (
               <div className="modal-quantity">
                 <span>數量：</span>
-                <button
-                  onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
-                  disabled={quantity <= 1}
-                >
-                  −
-                </button>
+                <button onClick={() => setQuantity((prev) => Math.max(1, prev - 1))} disabled={quantity <= 1}>−</button>
                 <span className="qty-number">{quantity}</span>
-                <button
-                  onClick={() =>
-                    setQuantity((prev) => Math.min(product.stock, prev + 1))
-                  }
-                  disabled={quantity >= product.stock}
-                >
-                  +
-                </button>
+                <button onClick={() => setQuantity((prev) => Math.min(product.stock, prev + 1))} disabled={quantity >= product.stock}>+</button>
               </div>
             )}
 

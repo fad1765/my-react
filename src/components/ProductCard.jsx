@@ -2,7 +2,7 @@ import "../styles/productcard.css";
 
 export default function ProductCard({ product, onClick }) {
   return (
-    <div className="product-card" onClick={() => onClick(product)}>
+    <div className="product-card" onClick={() => onClick && onClick(product)}>
       <div className="product-image-wrapper">
         <img src={product.image} alt={product.name} />
         <div className="product-overlay">
