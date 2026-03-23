@@ -1,5 +1,18 @@
-import SuccessModal from "./SuccessModal";
+import { useEffect } from "react";
+import "../styles/logoutSuccessModal.css";
 
 export default function LogoutSuccessModal({ onDone }) {
-  return <SuccessModal message="已成功登出" onDone={onDone} />;
+  useEffect(() => {
+    const timer = setTimeout(onDone, 1500); // 1.5秒後自動關閉
+    return () => clearTimeout(timer);
+  }, [onDone]);
+
+  return (
+    <div className="success-overlay">
+      <div className="success-modal">
+        <div className="success-check">✓</div>
+        <p>已成功登出</p>
+      </div>
+    </div>
+  );
 }
